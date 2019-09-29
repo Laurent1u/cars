@@ -50,6 +50,39 @@ $carsArray = array(
         'country' => 'France'
     )
 );
-
-echo '<pre>';
-print_r($carsArray);
+?>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cars</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th colspan="6">Cars</th>
+        </tr>
+        <tr>
+            <th>Brand</th>
+            <th>Model</th>
+            <th>Seats</th>
+            <th>Color</th>
+            <th>Year</th>
+            <th>Brand Country</th>
+        </tr>
+        <?php foreach ($carsArray as $car) { ?>
+            <tr>
+                <td><?php echo $car['brand']; ?></td>
+                <td><?php echo $car['model']; ?></td>
+                <td><?php echo $car['seats']; ?></td>
+                <td><?php echo $car['color']; ?></td>
+                <td><?php echo $car['year']; ?></td>
+                <td><?php echo $car['country']; ?></td>
+            </tr>
+        <?php } ?>
+    </table>
+</body>
+</html>
